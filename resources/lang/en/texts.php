@@ -87,6 +87,7 @@ return [
     'client_count' => '31+',
     'seasoned_professionals' => 'Seasoned professionals from different industries',
     'worked_with_title' => 'We are proud to have worked with trusted international and home-grown companies.',
+    'stats_bg' => 'eventAsset/image201.png',
 
 //events
     'inaugurations' => [

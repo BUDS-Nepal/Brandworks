@@ -4,7 +4,6 @@
 
         <div class="lg:h-[100vh] h-[36vh] flex  flex-col justify-center ">
             <div class="text-center  flex justify-center items-center">
-                {{-- <img src="{{ asset('home/logo.png') }}" alt="Logo" class="mx-auto"> --}}
                 @foreach (trans('texts.herologo') as $event)
                     <div class="">
                         @include('components.hero-carousel', [
@@ -13,10 +12,6 @@
                     </div>
                 @endforeach
             </div>
-            {{-- <p class="text-center md:text-2xl text-xl flex flex-col relative bottom-12">
-                <span>{{ trans('texts.brand_actions') }}</span>
-                <span>{{ trans('texts.activation_fabrication') }} </span>
-            </p> --}}
         </div>
 
 
@@ -112,13 +107,10 @@
                         {{ trans('texts.motley_group') }}</p>
                 </div>
             </div>
-
-
-
         </div>
 
         {{-- why brandwork section  --}}
-        <div
+        {{-- <div
             class="hidden bg-gradient-to-r from-gray-400  to-white mx-auto lg:items-left items-center space-y-4  lg:justify-start lg:flex lg:flex-col h-52 lg:pl-24 ">
             <div class="w-fit pl-4 lg:pl-0">
                 <h2 class="text-4xl text-start">{{ trans('texts.why_title') }}</h2>
@@ -168,8 +160,12 @@
             <div class="col-span-6">
                 <img src="{{ asset('eventAsset/image18.png') }}" alt="Logo" class="w-full ">
             </div>
-        </div>
+        </div> --}}
 
+        <div class="lg:h-full pt-10 pb-10"
+            style="background-image: url({{ trans('texts.stats_bg') }}); background-size: contain; background-position: center;">
+            @include('home.stats')
+        </div>
         {{-- section about --}}
         <div
             class="flex items-center bg-transparent py-4 bg-gradient-to-r from-gray-400  to-white text-xl lg:text-5xl pt-10">
@@ -181,14 +177,9 @@
             <hr class="flex-grow border-t border-gray-400">
         </div>
         <div
-            class="bg-gradient-to-r pb-10  from-gray-400  to-white lg:grid lg:grid-cols-10 grid-col relative  bg-[#707070] lg:pb-24 lg:pt-16">
+            class="bg-gradient-to-r pb-10   from-gray-400  to-white lg:grid lg:grid-cols-10 grid-col relative  bg-[#707070] lg:pb-24 lg:pt-16 `">
 
-
-            <div class="w-full self-end col-span-6 lg:pl-20">
-                <img src="{{ asset('eventAsset/nepal-map.png') }}" alt="Logo" class="w-full">
-            </div>
-
-            <div class=" w-full lg:space-y-12 space-y-6 self-end lg:ms-24 col-span-2 pt-24 md:pt-0">
+            <div class=" w-full lg:space-y-12 space-y-6 self-end col-span-3  md:pt-0 lg:pl-48">
 
                 <div class="flex space-x-6 mx-4">
                     <img src="{{ asset('eventAsset/image17.png') }}" class="w-[25px] h-[28px] text-center self-center"
@@ -208,8 +199,12 @@
                     <p class="text-blue-400  text-2xl">{{ trans('texts.associates_media_network') }}</p>
                 </div>
             </div>
+            <div class="w-full self-end col-span-5 lg:ms-24 mt-4 lg:mt-0">
+                <img src="{{ asset('eventAsset/nepal-map.png') }}" alt="Logo" class="w-full">
+            </div>
 
         </div>
+
 
 
         <div>
